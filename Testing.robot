@@ -3,8 +3,6 @@ Documentation    Suite description
 Library          OperatingSystem
 Library          Selenium2Library
 
-#ol;ksdf;lk
-
 *** Variable ***
 ${BROWSER}      chrome
 ${TITLE}        WorldTicket
