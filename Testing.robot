@@ -20,7 +20,7 @@ Open Web
     Open Browser                            https://ecom-test-dat.worldticket.net/      ${BROWSER}
 Check Title
     Click Element                           //*[@id="v-cookielaw"]/div[2]/a[1]
-    ${TITLE_TEXT}=      Execute Javascript      return document.getElementsByTagName("title")[0].innerHTML
+    ${TITLE_TEXT}=      Get Title
     Should Contain                           ${TITLE_TEXT}   ${TITLE_TEST}
 Click Profile
     Wait Until Page Contains Element        //*[@id="header-account"]

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200810 21:16:42.045" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200810 21:37:13.944" rpa="false">
 <suite id="s1" name="Testing" source="F:\robot\Testing.robot">
 <test id="s1-t1" name="Open Web">
 <kw name="Open Browser" library="Selenium2Library">
@@ -8,10 +8,10 @@
 <arg>https://ecom-test-dat.worldticket.net/</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20200810 21:16:42.323" level="INFO">Opening browser 'chrome' to base url 'https://ecom-test-dat.worldticket.net/'.</msg>
-<status status="PASS" starttime="20200810 21:16:42.322" endtime="20200810 21:17:04.021"></status>
+<msg timestamp="20200810 21:37:14.228" level="INFO">Opening browser 'chrome' to base url 'https://ecom-test-dat.worldticket.net/'.</msg>
+<status status="PASS" starttime="20200810 21:37:14.228" endtime="20200810 21:37:27.242"></status>
 </kw>
-<status status="PASS" starttime="20200810 21:16:42.321" endtime="20200810 21:17:04.022" critical="yes"></status>
+<status status="PASS" starttime="20200810 21:37:14.227" endtime="20200810 21:37:27.243" critical="yes"></status>
 </test>
 <test id="s1-t2" name="Check Title">
 <kw name="Click Element" library="Selenium2Library">
@@ -19,36 +19,26 @@
 <arguments>
 <arg>//*[@id="v-cookielaw"]/div[2]/a[1]</arg>
 </arguments>
-<msg timestamp="20200810 21:17:04.025" level="INFO">Clicking element '//*[@id="v-cookielaw"]/div[2]/a[1]'.</msg>
-<status status="PASS" starttime="20200810 21:17:04.024" endtime="20200810 21:17:04.110"></status>
+<msg timestamp="20200810 21:37:27.245" level="INFO">Clicking element '//*[@id="v-cookielaw"]/div[2]/a[1]'.</msg>
+<status status="PASS" starttime="20200810 21:37:27.244" endtime="20200810 21:37:30.962"></status>
 </kw>
-<kw name="Execute Javascript" library="Selenium2Library">
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<arguments>
-<arg>return document.getElementsByTagName("title")[0].innerHTML</arg>
-</arguments>
+<kw name="Get Title" library="Selenium2Library">
+<doc>Returns the title of the current page.</doc>
 <assign>
 <var>${TITLE_TEXT}</var>
 </assign>
-<msg timestamp="20200810 21:17:04.112" level="INFO">Executing JavaScript:
-return document.getElementsByTagName("title")[0].innerHTML
-Without any arguments.</msg>
-<msg timestamp="20200810 21:17:04.898" level="INFO">${TITLE_TEXT} = WorldTicket New Airtickets Booking</msg>
-<status status="PASS" starttime="20200810 21:17:04.111" endtime="20200810 21:17:04.898"></status>
+<msg timestamp="20200810 21:37:30.995" level="INFO">${TITLE_TEXT} = WorldTicket New Airtickets Booking</msg>
+<status status="PASS" starttime="20200810 21:37:30.963" endtime="20200810 21:37:30.995"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
 <arguments>
 <arg>${TITLE_TEXT}</arg>
 <arg>${TITLE_TEST}</arg>
-<arg>msg=none</arg>
-<arg>value=true</arg>
-<arg>fail</arg>
 </arguments>
-<msg timestamp="20200810 21:17:04.899" level="FAIL">Keyword 'BuiltIn.Should Contain' got positional argument after named arguments.</msg>
-<status status="FAIL" starttime="20200810 21:17:04.899" endtime="20200810 21:17:04.899"></status>
+<status status="PASS" starttime="20200810 21:37:30.996" endtime="20200810 21:37:30.996"></status>
 </kw>
-<status status="FAIL" starttime="20200810 21:17:04.024" endtime="20200810 21:17:04.899" critical="yes">Keyword 'BuiltIn.Should Contain' got positional argument after named arguments.</status>
+<status status="PASS" starttime="20200810 21:37:27.244" endtime="20200810 21:37:30.998" critical="yes"></status>
 </test>
 <test id="s1-t3" name="Click Profile">
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
@@ -56,17 +46,17 @@ Without any arguments.</msg>
 <arguments>
 <arg>//*[@id="header-account"]</arg>
 </arguments>
-<status status="PASS" starttime="20200810 21:17:04.902" endtime="20200810 21:17:06.882"></status>
+<status status="PASS" starttime="20200810 21:37:31.003" endtime="20200810 21:37:31.047"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//*[@id="header-account"]</arg>
 </arguments>
-<msg timestamp="20200810 21:17:06.882" level="INFO">Clicking element '//*[@id="header-account"]'.</msg>
-<status status="PASS" starttime="20200810 21:17:06.882" endtime="20200810 21:17:07.780"></status>
+<msg timestamp="20200810 21:37:31.050" level="INFO">Clicking element '//*[@id="header-account"]'.</msg>
+<status status="PASS" starttime="20200810 21:37:31.049" endtime="20200810 21:37:31.927"></status>
 </kw>
-<status status="PASS" starttime="20200810 21:17:04.902" endtime="20200810 21:17:07.780" critical="yes"></status>
+<status status="PASS" starttime="20200810 21:37:31.002" endtime="20200810 21:37:31.928" critical="yes"></status>
 </test>
 <test id="s1-t4" name="Insert Email And Password">
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
@@ -74,7 +64,7 @@ Without any arguments.</msg>
 <arguments>
 <arg>//*[@id="email"]</arg>
 </arguments>
-<status status="PASS" starttime="20200810 21:17:07.784" endtime="20200810 21:17:09.689"></status>
+<status status="PASS" starttime="20200810 21:37:31.931" endtime="20200810 21:37:33.698"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -82,8 +72,8 @@ Without any arguments.</msg>
 <arg>//*[@id="email"]</arg>
 <arg>${EMAIL}</arg>
 </arguments>
-<msg timestamp="20200810 21:17:09.691" level="INFO">Typing text 'tester@worldticket.net' into text field '//*[@id="email"]'.</msg>
-<status status="PASS" starttime="20200810 21:17:09.690" endtime="20200810 21:17:09.969"></status>
+<msg timestamp="20200810 21:37:33.700" level="INFO">Typing text 'tester@worldticket.net' into text field '//*[@id="email"]'.</msg>
+<status status="PASS" starttime="20200810 21:37:33.699" endtime="20200810 21:37:34.255"></status>
 </kw>
 <kw name="Input Password" library="Selenium2Library">
 <doc>Types the given password into the text field identified by ``locator``.</doc>
@@ -91,12 +81,12 @@ Without any arguments.</msg>
 <arg>//*[@id="password"]</arg>
 <arg>${PASSWORD}</arg>
 </arguments>
-<msg timestamp="20200810 21:17:09.970" level="INFO">Typing password into text field '//*[@id="password"]'.</msg>
-<msg timestamp="20200810 21:17:10.076" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20200810 21:17:10.153" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20200810 21:17:09.970" endtime="20200810 21:17:10.153"></status>
+<msg timestamp="20200810 21:37:34.256" level="INFO">Typing password into text field '//*[@id="password"]'.</msg>
+<msg timestamp="20200810 21:37:34.323" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200810 21:37:34.396" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200810 21:37:34.255" endtime="20200810 21:37:34.396"></status>
 </kw>
-<status status="PASS" starttime="20200810 21:17:07.782" endtime="20200810 21:17:10.154" critical="yes"></status>
+<status status="PASS" starttime="20200810 21:37:31.930" endtime="20200810 21:37:34.397" critical="yes"></status>
 </test>
 <test id="s1-t5" name="Click Button Login">
 <kw name="Click Button" library="Selenium2Library">
@@ -104,10 +94,10 @@ Without any arguments.</msg>
 <arguments>
 <arg>//*[@id="step-registered-customers"]/div[3]/div/button</arg>
 </arguments>
-<msg timestamp="20200810 21:17:10.158" level="INFO">Clicking button '//*[@id="step-registered-customers"]/div[3]/div/button'.</msg>
-<status status="PASS" starttime="20200810 21:17:10.158" endtime="20200810 21:17:10.299"></status>
+<msg timestamp="20200810 21:37:34.400" level="INFO">Clicking button '//*[@id="step-registered-customers"]/div[3]/div/button'.</msg>
+<status status="PASS" starttime="20200810 21:37:34.399" endtime="20200810 21:37:34.547"></status>
 </kw>
-<status status="PASS" starttime="20200810 21:17:10.157" endtime="20200810 21:17:10.300" critical="yes"></status>
+<status status="PASS" starttime="20200810 21:37:34.398" endtime="20200810 21:37:34.547" critical="yes"></status>
 </test>
 <test id="s1-t6" name="Check Username">
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
@@ -115,15 +105,15 @@ Without any arguments.</msg>
 <arguments>
 <arg>//*[@id="header-account"]/ul/li[1]/a</arg>
 </arguments>
-<status status="PASS" starttime="20200810 21:17:10.303" endtime="20200810 21:17:13.474"></status>
+<status status="PASS" starttime="20200810 21:37:34.550" endtime="20200810 21:37:37.546"></status>
 </kw>
 <kw name="Mouse Over" library="Selenium2Library">
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
 <arguments>
 <arg>//*[@id="header-account"]/a/i</arg>
 </arguments>
-<msg timestamp="20200810 21:17:13.475" level="INFO">Simulating Mouse Over on element '//*[@id="header-account"]/a/i'.</msg>
-<status status="PASS" starttime="20200810 21:17:13.475" endtime="20200810 21:17:13.765"></status>
+<msg timestamp="20200810 21:37:37.547" level="INFO">Simulating Mouse Over on element '//*[@id="header-account"]/a/i'.</msg>
+<status status="PASS" starttime="20200810 21:37:37.546" endtime="20200810 21:37:37.826"></status>
 </kw>
 <kw name="Element Text Should Be" library="Selenium2Library">
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
@@ -132,10 +122,10 @@ Without any arguments.</msg>
 <arg>${USERNAME}</arg>
 <arg>"Username not contain "Junior Tester""</arg>
 </arguments>
-<msg timestamp="20200810 21:17:13.766" level="INFO">Verifying element '//*[@id="header-account"]/ul/li[1]/a' contains exact text 'Junior Tester'.</msg>
-<status status="PASS" starttime="20200810 21:17:13.766" endtime="20200810 21:17:13.792"></status>
+<msg timestamp="20200810 21:37:37.827" level="INFO">Verifying element '//*[@id="header-account"]/ul/li[1]/a' contains exact text 'Junior Tester'.</msg>
+<status status="PASS" starttime="20200810 21:37:37.827" endtime="20200810 21:37:37.852"></status>
 </kw>
-<status status="PASS" starttime="20200810 21:17:10.302" endtime="20200810 21:17:13.792" critical="yes"></status>
+<status status="PASS" starttime="20200810 21:37:34.549" endtime="20200810 21:37:37.852" critical="yes"></status>
 </test>
 <test id="s1-t7" name="Click The Account Information Tab">
 <kw name="Click Element" library="Selenium2Library">
@@ -143,10 +133,10 @@ Without any arguments.</msg>
 <arguments>
 <arg>//*[@id="account_edit"]</arg>
 </arguments>
-<msg timestamp="20200810 21:17:13.795" level="INFO">Clicking element '//*[@id="account_edit"]'.</msg>
-<status status="PASS" starttime="20200810 21:17:13.795" endtime="20200810 21:17:14.742"></status>
+<msg timestamp="20200810 21:37:37.855" level="INFO">Clicking element '//*[@id="account_edit"]'.</msg>
+<status status="PASS" starttime="20200810 21:37:37.854" endtime="20200810 21:37:38.712"></status>
 </kw>
-<status status="PASS" starttime="20200810 21:17:13.794" endtime="20200810 21:17:14.743" critical="yes"></status>
+<status status="PASS" starttime="20200810 21:37:37.854" endtime="20200810 21:37:38.712" critical="yes"></status>
 </test>
 <test id="s1-t8" name="Check Email Address Field">
 <kw name="Wait Until Page Contains Element" library="Selenium2Library">
@@ -154,7 +144,7 @@ Without any arguments.</msg>
 <arguments>
 <arg>//*[@id="email"]</arg>
 </arguments>
-<status status="PASS" starttime="20200810 21:17:14.746" endtime="20200810 21:17:16.466"></status>
+<status status="PASS" starttime="20200810 21:37:38.716" endtime="20200810 21:37:40.370"></status>
 </kw>
 <kw name="Textfield Value Should Be" library="Selenium2Library">
 <doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
@@ -163,30 +153,30 @@ Without any arguments.</msg>
 <arg>${EMAIL}</arg>
 <arg>"email address field is not equal to the login email"</arg>
 </arguments>
-<msg timestamp="20200810 21:17:16.530" level="INFO">Content of text field '//*[@id="email"]' is 'tester@worldticket.net'.</msg>
-<status status="PASS" starttime="20200810 21:17:16.467" endtime="20200810 21:17:16.530"></status>
+<msg timestamp="20200810 21:37:40.403" level="INFO">Content of text field '//*[@id="email"]' is 'tester@worldticket.net'.</msg>
+<status status="PASS" starttime="20200810 21:37:40.370" endtime="20200810 21:37:40.403"></status>
 </kw>
-<status status="PASS" starttime="20200810 21:17:14.745" endtime="20200810 21:17:16.530" critical="yes"></status>
+<status status="PASS" starttime="20200810 21:37:38.715" endtime="20200810 21:37:40.404" critical="yes"></status>
 </test>
 <test id="s1-t9" name="Finished Test">
 <kw name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200810 21:17:16.533" endtime="20200810 21:17:21.532"></status>
+<status status="PASS" starttime="20200810 21:37:40.406" endtime="20200810 21:37:45.958"></status>
 </kw>
-<status status="PASS" starttime="20200810 21:17:16.532" endtime="20200810 21:17:21.533" critical="yes"></status>
+<status status="PASS" starttime="20200810 21:37:40.406" endtime="20200810 21:37:45.959" critical="yes"></status>
 </test>
 <doc>Suite description</doc>
-<status status="FAIL" starttime="20200810 21:16:42.047" endtime="20200810 21:17:21.536"></status>
+<status status="PASS" starttime="20200810 21:37:13.946" endtime="20200810 21:37:45.964"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="8" fail="1">Critical Tests</stat>
-<stat pass="8" fail="1">All Tests</stat>
+<stat pass="9" fail="0">Critical Tests</stat>
+<stat pass="9" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="8" fail="1" id="s1" name="Testing">Testing</stat>
+<stat pass="9" fail="0" id="s1" name="Testing">Testing</stat>
 </suite>
 </statistics>
 <errors>
