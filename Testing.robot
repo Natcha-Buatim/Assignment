@@ -2,13 +2,17 @@
 Documentation    Suite description
 Library          OperatingSystem
 Library          Selenium2Library
+Library          String
 
 *** Variable ***
 ${BROWSER}      chrome
-${TITLE}        WorldTicket
+${TITLE_TEST}   WorldTicket
 ${EMAIL}        tester@worldticket.net
 ${PASSWORD}     atm1234
 ${USERNAME}     Junior Tester
+${TITLE_TEXT}
+
+*** Keywords ***
 
 
 *** Test Cases ***
@@ -16,8 +20,10 @@ Open Web
     Open Browser                            https://ecom-test-dat.worldticket.net/      ${BROWSER}
 Check Title
     Click Element                           //*[@id="v-cookielaw"]/div[2]/a[1]
-    Element Text Should Be                  //title        ${TITLE}        "Title name not contain "WorldTicket""
+    ${TITLE_TEXT}=      Execute Javascript      return document.getElementsByTagName("title")[0].innerHTML
+    Should Contain                           ${TITLE_TEXT}   ${TITLE_TEST}
 Click Profile
+    Wait Until Page Contains Element        //*[@id="header-account"]
     Click Element                           //*[@id="header-account"]
 Insert Email And Password
     Wait Until Page Contains Element        //*[@id="email"]
@@ -34,3 +40,5 @@ Click The Account Information Tab
 Check Email Address Field
     Wait Until Page Contains Element        //*[@id="email"]
     Textfield Value Should Be               //*[@id="email"]        ${EMAIL}        "email address field is not equal to the login email"
+Finished Test
+    Close Browser
